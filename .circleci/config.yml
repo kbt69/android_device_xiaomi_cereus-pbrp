@@ -10,10 +10,11 @@ jobs:
       VENDOR: 'xiaomi'
       CODENAME: 'cereus'
       FLAVOR: 'eng'
-      #PB_OFFICIAL: 'true'
-      TEST_BUILD: 'true'
+      PB_OFFICIAL: 'true'
       CHANGELOG: |
         - Initial Release for Redmi 6
+        - Build Busybox
+        - Disable Treble Compatibility Check By Default
     working_directory: /home/builder/pitchblack
     steps:
       - run:
