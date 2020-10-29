@@ -16,6 +16,9 @@
 
 DEVICE_PATH := device/xiaomi/cereus
 
+# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
 TARGET_BOOTLOADER_BOARD_NAME := mt6765
@@ -69,8 +72,15 @@ TARGET_USERIMAGES_USE_F2FS := true
 # TWRP
 TW_EXTRA_LANGUAGES := true
 TW_THEME := portrait_hdpi
-TW_USE_TOOLBOX := true
+TW_FORCE_USE_BUSYBOX := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_EXCLUDE_TWRPAPP := true
 TW_SCREEN_BLANK_ON_BOOT := true
+
+# Haxx: Anti-Rollback
+VENDOR_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
+
+# PBRP Build Flags
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
