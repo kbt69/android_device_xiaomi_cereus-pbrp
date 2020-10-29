@@ -13,7 +13,7 @@ jobs:
       #PB_OFFICIAL: 'true'
       TEST_BUILD: 'true'
       CHANGELOG: |
-        - Initial Release for Redmi 6/6A
+        - Initial Release for Redmi 6
     working_directory: /home/builder/pitchblack
     steps:
       - run:
