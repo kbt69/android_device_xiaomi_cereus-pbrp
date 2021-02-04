@@ -12,9 +12,10 @@ jobs:
       FLAVOR: 'eng'
       PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - Initial Release for Redmi 6
-        - Build Busybox
-        - Disable Treble Compatibility Check By Default
+        - Update based 3.5.0
+        - Improve translate
+        - Update lock pattern types for android 11
+        - Misc.
     working_directory: /home/builder/pitchblack
     steps:
       - run:
